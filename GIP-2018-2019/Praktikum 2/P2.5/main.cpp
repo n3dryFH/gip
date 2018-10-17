@@ -3,7 +3,7 @@ using namespace std;
 
 int main()
 {
-	double input = .0, output = .0;
+	double input = .0;
 	int selection = 0;
 	cout << "Ihre Eingabe: ? ";
 	cin >> input;
