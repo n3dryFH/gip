@@ -15,7 +15,7 @@ int main()
 
 	double fahrenheit = (input * 1.8 + 32) * (1 / selection);
 
-	int dMultiplicator = int(.7 + (selection / 10.0));
+	int dMultiplicator = .7 + (selection / 10.0);
 	double dollar = (input * 1.2957) * dMultiplicator;
 	selection -= dMultiplicator * selection;
 
