@@ -4,15 +4,15 @@ using namespace std;
 int main()
 {
 	int smallestValue = 0, smallestValueIndex = 0,
-		highestValue = 0, highestValueIndex = 0,
+		greatestValue = 0, greatestValueIndex = 0,
 		value1 = 0, value2 = 0, value3 = 0, value4 = 0, value5 = 0;
 
 	cout << "Bitte geben Sie die 1. Zahl ein: ? ";
 	cin >> value1;		
 	smallestValue = value1;
 	smallestValueIndex = 1;	
-	highestValue = value1;
-	highestValueIndex = 1;	
+	greatestValue = value1;
+	greatestValueIndex = 1;	
 
 	cout << "Bitte geben Sie die 2. Zahl ein: ? ";
 	cin >> value2;
@@ -21,10 +21,10 @@ int main()
 		smallestValue = value2;
 		smallestValueIndex = 2;
 	}
-	if (value2 > highestValue)
+	else if (value2 > greatestValue)
 	{
-		highestValue = value2;
-		highestValueIndex = 2;
+		greatestValue = value2;
+		greatestValueIndex = 2;
 	}
 
 	cout << "Bitte geben Sie die 3. Zahl ein: ? ";
@@ -34,10 +34,10 @@ int main()
 		smallestValue = value3;
 		smallestValueIndex = 3;
 	}
-	if (value3 > highestValue)
+	else if (value3 > greatestValue)
 	{
-		highestValue = value3;
-		highestValueIndex = 3;
+		greatestValue = value3;
+		greatestValueIndex = 3;
 	}
 
 	cout << "Bitte geben Sie die 4. Zahl ein: ? ";
@@ -47,10 +47,10 @@ int main()
 		smallestValue = value4;
 		smallestValueIndex = 4;
 	}
-	if (value4 > highestValue)
+	else if (value4 > greatestValue)
 	{
-		highestValue = value4;
-		highestValueIndex = 4;
+		greatestValue = value4;
+		greatestValueIndex = 4;
 	}
 
 	cout << "Bitte geben Sie die 5. Zahl ein: ? ";
@@ -60,14 +60,14 @@ int main()
 		smallestValue = value5;
 		smallestValueIndex = 5;
 	}
-	if (value5 > highestValue)
+	else if (value5 > greatestValue)
 	{
-		highestValue = value5;
-		highestValueIndex = 5;
+		greatestValue = value5;
+		greatestValueIndex = 5;
 	}
 
 	cout << "Die " << smallestValueIndex << ". Zahl war die kleinste der eingegebenen Zahlen und lautet: " << smallestValue << endl;
-	cout << "Die " << highestValueIndex << ". Zahl war die groesste der eingegebenen Zahlen und lautet: " << highestValue << endl;
+	cout << "Die " << greatestValueIndex << ". Zahl war die groesste der eingegebenen Zahlen und lautet: " << greatestValue << endl;
 
 	system("PAUSE");
 	return 0;

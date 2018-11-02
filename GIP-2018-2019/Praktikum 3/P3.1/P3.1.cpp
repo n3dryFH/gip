@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
 	int day1 = 0, month1 = 0, year1 = 0,
-		day2 = 0, month2 = 0, year2 = 0;	
+		day2 = 0, month2 = 0, year2 = 0;
 
 	cout << "Bitte geben Sie den Tag des ersten Datums ein: ";
 	cin >> day1;
@@ -20,18 +20,19 @@ int main()
 	cout << "Bitte geben Sie das Jahr des zweiten Datums ein: ";
 	cin >> year2;
 
-	if (year1 == year2 && month1 == month2 && day1 == day2) 
+	if (year1 == year2 && month1 == month2 && day1 == day2)
 	{
 		cout << "Beide Datumsangaben sind gleich." << endl;
 	}
-	else if (year1 < year2) {
+	else if (year1 < year2) 
+	{
 		cout << "Das erste Datum liegt vor dem zweiten Datum." << endl;
 	}
 	else if (year1 > year2)
 	{
 		cout << "Das zweite Datum liegt vor dem ersten Datum. " << endl;
 	}
-	else 
+	else
 	{
 		if (month1 < month2)
 		{
@@ -41,7 +42,7 @@ int main()
 		{
 			cout << "Das zweite Datum liegt vor dem ersten Datum. " << endl;
 		}
-		else 
+		else
 		{
 			if (day1 > day2)
 			{
