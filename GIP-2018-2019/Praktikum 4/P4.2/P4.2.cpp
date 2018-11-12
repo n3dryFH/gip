@@ -30,7 +30,7 @@ int main()
 			charEnd = 'Z';
 		}
 			
-		if (charBegin > 0 && charEnd > 0) 
+		if (charBegin != 0 && charEnd != 0) 
 		{
 			const int charOffset = charShift % alphabetLen;
 			encryptedChar += charOffset;
