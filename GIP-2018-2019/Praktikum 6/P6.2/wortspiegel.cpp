@@ -1,4 +1,5 @@
 #include "wortspiegel.h"
+using namespace std;
 
 void wortspiegel(string& text, int pos)
 {
@@ -12,7 +13,7 @@ void wortspiegel(string& text, int pos)
 		}		
 	}
 
-	for (; end < text.length(); ++end)
+	for (; end < text.length()-1; ++end)
 	{
 		if (text.at(end) == ' ' || text.at(end) == '.')
 		{	

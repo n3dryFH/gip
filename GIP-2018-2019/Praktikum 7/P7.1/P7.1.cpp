@@ -35,11 +35,7 @@ TEST CASE 2
 int main()
 {
 	int sudoku[9][9] = { 0 };
-	string eingabe[11];
-	for (unsigned int i = 0; i < 11; ++i)
-	{
-		eingabe[i] = "";
-	}
+	string eingabe[11];	
 
 	cout << "Bitte geben Sie das Sudoku ein:" << endl;
 	for (unsigned int i = 0; i < 11; ++i)
@@ -68,7 +64,6 @@ int main()
 	} 
 
 	cout << endl << "Das Sudoku lautet:" << endl;
-
 	for (unsigned int y = 0; y < 9; ++y)	
 	{		
 		cout << ';'; // first char always ';'
@@ -83,8 +78,7 @@ int main()
 			{
 				cout << ';';
 			}				
-		}
-		
+		}		
 		cout << endl;
 		if (y == 2 || y == 5) // y field seperator
 		{

@@ -13,16 +13,16 @@ int main()
 		} while (numbers[i] < 1 || numbers[i] > 9);
 	}
 
-	for (int x = 8; x >= 0; --x)
+	for (int x = 9; x > 0; --x)
 	{
-		cout << x + 1;
+		cout << x ;
 		for (unsigned int y = 0; y < 5; ++y)
 		{
-			if (numbers[y] == x + 1)
+			if (numbers[y] == x)
 			{
 				cout << '*';
 			} 
-			else if (x + 1 > numbers[y])
+			else if (x > numbers[y])
 			{
 				cout << '.';
 			}

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include "wortspiegel.h"
 using namespace std;
 
@@ -14,17 +15,8 @@ int main()
 
 	do 
 	{
-		cout << text << endl;
-		for (unsigned int i = 0; i < text.length(); ++i)
-		{
-			if (i == pos)
-			{
-				cout << '*';
-				break;
-			}
-			cout << ' ';
-		}
-		cout << endl;
+		cout << text << endl;		
+		cout << right << setw(pos+1) << '*' << endl;
 
 		cout << "Befehl (l: links, r: rechts, s: spiegeln, q: Ende) ?- ";
 		cin >> input;

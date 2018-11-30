@@ -1,6 +1,5 @@
 #pragma once
 
 #include <string>
-using namespace std;
 
-void wortspiegel(string &text, int pos);
+void wortspiegel(std::string &text, int pos);
