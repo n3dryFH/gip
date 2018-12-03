@@ -14,8 +14,8 @@ int main()
 	while(getline(personFile, line))
 	{
 		Person p = ParsePerson(line);
-		shortListHtml += "<b>" + p.Name + "</b>, " + p.Surname + "<br>";
-		longListHtml += "<b>" + p.Surname + " " + p.Name + "</b>, " + p.Birthday + "<br>";
+		shortListHtml += "<b>" + p.Name + "</b>, " + p.Firstname + "<br/>";
+		longListHtml += "<b>" + p.Firstname + " " + p.Name + "</b>, " + p.Birthday + "<br/>";
 	}
 	personFile.close();
 

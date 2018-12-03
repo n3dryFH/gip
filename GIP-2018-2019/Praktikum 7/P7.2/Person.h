@@ -3,11 +3,9 @@
 #include <iostream>
 #include <string>
 
-
-// todo add namespace
 struct Person {
 	std::string Name;
-	std::string Surname;
+	std::string Firstname;
 	std::string Birthday;
 };
 
