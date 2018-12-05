@@ -8,7 +8,7 @@ struct T_Morse_Data
 	std::string morse_code;
 };
 
-const int morse_data_len = 47;
+const int morse_data_len = 45;
 
 const T_Morse_Data morse_data[] = {
  { 'a', ".-" },
@@ -64,7 +64,7 @@ const T_Morse_Data morse_data[] = {
  { '=', "-...-" }
 };
 
-const string& GetMorseString(char c)
+string GetMorseString(const char c)
 {
 	char lowerCaseChar = c;	
 	if (c >= 'a' && c <= 'z')
@@ -76,6 +76,7 @@ const string& GetMorseString(char c)
 		if (morse_data[i].letter == lowerCaseChar)
 			return morse_data[i].morse_code;
 	}
+	return "";
 }
 
 int main()
