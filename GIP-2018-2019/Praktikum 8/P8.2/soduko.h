@@ -2,7 +2,7 @@
 
 #include <string>
 
-enum Soduko_Status
+enum Soduko_Status : unsigned char
 {
 	Not_Found = 0,
 	Found_Once,
