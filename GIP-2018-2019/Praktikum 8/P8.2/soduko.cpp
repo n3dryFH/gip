@@ -30,7 +30,7 @@ unsigned int PrintInvalidValues(const Soduko_Value values[], const unsigned int 
 		{
 			printed_invalid_values++;
 			cout << pre_text << " " << entry_id << ": Zahl " << value.Value <<
-				" kommt " + (value.Status == Soduko_Status::Found_Multiple) ? "mehrfach" : "nicht";
+				" kommt " << (value.Status == Soduko_Status::Found_Multiple ? "mehrfach" : "nicht");
 			cout << " vor" << endl;
 		}
 	}

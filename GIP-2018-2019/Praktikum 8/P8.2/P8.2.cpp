@@ -63,6 +63,7 @@ int main()
 		getline(cin, eingabe[i]);
 	}
 
+
 	int x = 0, y = 0;
 	for (unsigned int i = 0; i < 11; ++i)
 	{
