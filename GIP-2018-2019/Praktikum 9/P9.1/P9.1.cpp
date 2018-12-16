@@ -93,7 +93,8 @@ void in_liste_einfuegen(TListenKnoten* &anker, const int wert_neu, const int vor
 	else
 	{
 		TListenKnoten *ptr = anker;
-		while (ptr)
+		bool foundEnd = false;
+		do
 		{
 			if (ptr->data == vor_wert)
 			{
@@ -106,11 +107,11 @@ void in_liste_einfuegen(TListenKnoten* &anker, const int wert_neu, const int vor
 				ptr->prev = neuer_eintrag;
 				return;
 			}			
-			ptr = ptr->next; 
-		}
-		ptr = anker; // set to begin
-		while (ptr->next != nullptr) // find end
-			ptr = ptr->next;
+			if (ptr->next)
+				ptr = ptr->next;
+			else
+				foundEnd = true;
+		} while (!foundEnd);		
 		ptr->next = neuer_eintrag; // add to end
 		neuer_eintrag->prev = ptr;
 	}
@@ -128,7 +129,7 @@ void liste_loeschen(TListenKnoten* &anker)
 	anker = nullptr;
 }
 
-#define TEST_CASE 2
+#define TEST_CASE 1
 
 int main()
 {
