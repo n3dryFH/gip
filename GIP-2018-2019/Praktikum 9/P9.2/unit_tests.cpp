@@ -12,6 +12,7 @@ TEST_CASE("Zeichenkette suchen, Text mit Laenge groesser 1, Zeichenkette mit Lae
 	REQUIRE(zeichenkette_suchen("abcdabcde", "abcdabcdx") == -1);
 
 	// Testfälle aus pdf
+	REQUIRE(zeichenkette_suchen("abcdefg", "bcd99") == -1);
 	REQUIRE(zeichenkette_suchen("abcdefg", "efg") == 4);
 	REQUIRE(zeichenkette_suchen("abc", "abcde") == -1);
 	REQUIRE(zeichenkette_suchen("012 abc abc 89", "abc") == 4);
