@@ -1,18 +1,16 @@
 #include "suchen.h"
 
-unsigned int gip_strlen(const char* text)
+unsigned int strlen(const char* text)
 {
-	const char* ptr = text;
-	unsigned int len = 0;
-	while (*(ptr++) != '\0')
-		++len;
-	return len;
+	unsigned int i = 0;
+	for (; text[i] != '\0'; ++i);
+	return i;
 }
 
 int zeichenkette_suchen(const char* text, const char* zkette)
 {
-	const unsigned int zketteLen = gip_strlen(zkette);
-	const unsigned int textLen = gip_strlen(text);
+	const unsigned int zketteLen = strlen(zkette);
+	const unsigned int textLen = strlen(text);
 	for (unsigned int i = 0; i < textLen; ++i)
 	{
 		if (zkette[0] == text[i])

@@ -21,7 +21,7 @@ int main()
 		cout << "Bitte geben Sie die zu suchende Zeichenkette ein: ";
 		cin.getline(zkette, 21);
 	}	
-	while (gip_strlen(zkette) < 1);
+	while (strlen(zkette) < 1);
 
 	int status = zeichenkette_suchen(text, zkette);
 	if (status < 0)
