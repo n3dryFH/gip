@@ -1,6 +1,4 @@
 #include <iostream>
-#include <string>
-
 using namespace std;
 
 unsigned int gip_strlen(const char* text)
@@ -40,12 +38,13 @@ int zeichenkette_suchen(const char* text, const char* zkette)
 
 int main()
 {
-	string text = "", zkette = "";
+	char* text = new char[21];
+	char* zkette = new char[21];	
 	cout << "Bitte geben Sie den Text ein: ";
-	getline(cin, text);
+	cin.getline(text, 21);
 	cout << "Bitte geben Sie die zu suchende Zeichenkette ein: ";
-	getline(cin, zkette);
-	int status = zeichenkette_suchen(text.c_str(), zkette.c_str());
+	cin.getline(zkette, 21);
+	int status = zeichenkette_suchen(text, zkette);
 	if (status < 0)
 		cout << "Die Zeichenkette '" << zkette << "' ist NICHT in dem Text '" << text << "' enthalten." << endl;
 	else
