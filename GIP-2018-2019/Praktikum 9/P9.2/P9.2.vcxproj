@@ -116,6 +116,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="P9.2.cpp" />
+    <ClCompile Include="suchen.cpp" />
+    <ClCompile Include="unit_tests.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="catch.h" />
+    <ClInclude Include="suchen.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,45 +1,28 @@
+#define CATCH_CONFIG_RUNNER
+#include "catch.h"
 #include <iostream>
+
 using namespace std;
-
-unsigned int gip_strlen(const char* text)
-{
-	const char* ptr = text;
-	unsigned int len = 0;
-	while (*(ptr++) != '\0')
-		++len;
-	return len;
-}
-
-int zeichenkette_suchen(const char* text, const char* zkette)
-{
-	const unsigned int zketteLen = gip_strlen(zkette);
-	const unsigned int textLen = gip_strlen(text);
-	for (unsigned int i = 0; i < textLen; ++i)
-	{
-		if (zkette[0] == text[i])
-		{
-			unsigned int remainingChars = zketteLen - 1;
-			for (unsigned int zketteIndex = 1, textIndex = i + 1;
-				textIndex < textLen && zketteIndex < zketteLen &&
-				remainingChars > 0 && zkette[zketteIndex] == text[textIndex];
-				--remainingChars, ++textIndex, ++zketteIndex);
-
-			if (remainingChars == 0)
-				return i;
-		}
-	}
-	return -1;
-}
-
+#include "suchen.h"
 
 int main()
 {
+	if (Catch::Session().run()) {
+		system("PAUSE");
+		return 1;
+	}
+
 	char text[21];
 	char zkette[21];
 	cout << "Bitte geben Sie den Text ein: ";
 	cin.getline(text, 21);
-	cout << "Bitte geben Sie die zu suchende Zeichenkette ein: ";
-	cin.getline(zkette, 21);
+	do 
+	{
+		cout << "Bitte geben Sie die zu suchende Zeichenkette ein: ";
+		cin.getline(zkette, 21);
+	}	
+	while (gip_strlen(zkette) < 1);
+
 	int status = zeichenkette_suchen(text, zkette);
 	if (status < 0)
 		cout << "Die Zeichenkette '" << zkette << "' ist NICHT in dem Text '" << text << "' enthalten." << endl;

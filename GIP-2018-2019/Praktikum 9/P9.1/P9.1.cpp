@@ -157,7 +157,7 @@ int main()
 	in_liste_einfuegen(anker, 99, 0);
 	in_liste_einfuegen(anker, 99, 25);
 	in_liste_einfuegen(anker, 99, 81);
-	in_liste_einfuegen(anker, 99, 99);
+	in_liste_einfuegen(anker, 99, 9999);
 	liste_ausgeben(anker);
 	liste_ausgeben_rueckwaerts(anker);
 	liste_loeschen(anker);
