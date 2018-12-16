@@ -38,11 +38,11 @@ int zeichenkette_suchen(const char* text, const char* zkette)
 
 int main()
 {
-	char* text = new char[21];
-	char* zkette = new char[21];	
+	char text[21];
+	char zkette[21];
 	cout << "Bitte geben Sie den Text ein: ";
-	cin.getline(text, 21);
-	cout << "Bitte geben Sie die zu suchende Zeichenkette ein: ";
+	cin.getline(text, 21);	
+	cout << "Bitte geben Sie die zu suchende Zeichenkette ein: ";	
 	cin.getline(zkette, 21);
 	int status = zeichenkette_suchen(text, zkette);
 	if (status < 0)
