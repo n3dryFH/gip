@@ -2,11 +2,15 @@ CXX = cl
 CXXFLAGS = /EHsc /nologo
 LD = link
 LDFLAGS = /nologo
+OBJ = main.obj sort.obj
 MAIN_EXECUTABLE = main.exe
+
+$(MAIN_EXECUTABLE): $(OBJ)
+	$(LD) $(LDFLAGS) $^ /OUT:$@
 
 .PHONY: all
 all: $(MAIN_EXECUTABLE)
-
+	
 .PHONY: clean
 clean:
 	del *.obj
@@ -15,9 +19,5 @@ clean:
 distclean: clean
 	del $(MAIN_EXECUTABLE)
 
-
-$(MAIN_EXECUTABLE): main.obj sort.obj
-	$(LD) $(LDFLAGS) $^ /OUT:$@
-
-%.obj: %.cpp %.h
+%.obj: %.cpp
 	$(CXX) $(CXXFLAGS) /c $<
