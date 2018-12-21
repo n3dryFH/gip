@@ -129,7 +129,7 @@ void liste_loeschen(TListenKnoten* &anker)
 	anker = nullptr;
 }
 
-#define TEST_CASE 1
+#define TEST_CASE 2
 
 int main()
 {

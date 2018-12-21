@@ -12,8 +12,8 @@ int main()
 		return 1;
 	}
 
-	char text[21];
-	char zkette[21];
+	char text[21] = { 0 };
+	char zkette[21] = { 0 };
 	cout << "Bitte geben Sie den Text ein: ";
 	cin.getline(text, 21);
 	do 
