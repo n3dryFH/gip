@@ -5,19 +5,19 @@ LDFLAGS = /nologo
 OBJ = main.obj sort.obj
 MAIN_EXECUTABLE = main.exe
 
-$(MAIN_EXECUTABLE): $(OBJ)
-	$(LD) $(LDFLAGS) $^ /OUT:$@
+all: $(MAIN_EXECUTABLE)	
 
-.PHONY: all
-all: $(MAIN_EXECUTABLE)
+#S@ = file name of the target of the rule = $(MAIN_EXECUTABLE), $^ = all the prerequisites = $(OBJ), 
+$(MAIN_EXECUTABLE): $(OBJ)	
+	$(LD) $(LDFLAGS) $^ /OUT:$@		
 	
-.PHONY: clean
 clean:
 	del *.obj
+.PHONY: clean
 
-.PHONY: clean distclean
 distclean: clean
 	del $(MAIN_EXECUTABLE)
 
-%.obj: %.cpp
-	$(CXX) $(CXXFLAGS) /c $<
+#$< = name of the first prerequisite, /c = compile with linking
+%.obj: %.cpp	
+	$(CXX) $(CXXFLAGS) /c $^	

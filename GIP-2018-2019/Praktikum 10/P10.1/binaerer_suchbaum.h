@@ -4,8 +4,9 @@ namespace suchbaum {
 	class BaumKnoten
 	{
 	public:
-		BaumKnoten(int wert, BaumKnoten* elternKnoten);
+		BaumKnoten(const int wert);
 		BaumKnoten();
+
 		void einfuegen(const int wert);
 		void ausgeben() const;
 
@@ -16,12 +17,10 @@ namespace suchbaum {
 	private:
 		int m_wert;		
 		bool m_bInitalized;
-		BaumKnoten* m_elternKnoten;
 		BaumKnoten* m_rechterKindKnoten;
 		BaumKnoten* m_linkerKindKnoten;
-
 	};
 
-	void knoten_ausgeben(const BaumKnoten* knoten, int tiefe);
+	void knoten_ausgeben(const BaumKnoten* const knoten, const unsigned int tiefe);
 }
 
