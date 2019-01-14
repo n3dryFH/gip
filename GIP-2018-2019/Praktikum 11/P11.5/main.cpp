@@ -11,7 +11,7 @@ const int border = 20;    // Rand links und oben bis zu den ersten Kaestchen (in
 // Prototyp der Funktionen zum Vorbelegen des Grids ...
 void grid_init(bool grid[][grid_size]);
 
-bool ShouldFieldBeAlive(unsigned int, unsigned int, bool, bool[][grid_size]);
+bool should_field_be_alive(unsigned int, unsigned int, bool, bool[][grid_size]);
 
 int main()
 {
@@ -45,7 +45,7 @@ int main()
         // TO DO
 		for (unsigned int x = 0; x < grid_size; ++x) 		
 			for (unsigned int y = 0; y < grid_size; ++y) 							
-				next_grid[x][y] = ShouldFieldBeAlive(x, y, grid[x][y], grid);			
+				next_grid[x][y] = should_field_be_alive(x, y, grid[x][y], grid);
 
         // Kopiere das naechste Spielfeld in das aktuelle Spielfeld ...
         // TO DO
@@ -179,7 +179,7 @@ void grid_init(bool grid[][grid_size])
     }
 }
 
-bool ShouldFieldBeAlive(unsigned int aX, unsigned int aY, bool aCurrentlyAlive, bool aGrid[][grid_size])
+bool should_field_be_alive(unsigned int aX, unsigned int aY, bool aCurrentlyAlive, bool aGrid[][grid_size])
 {
 	unsigned int aliveCellsCounter = 0;
 	unsigned int endX = 0, endY = 0;

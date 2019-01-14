@@ -1,5 +1,6 @@
-#include "MyRectangle.h"
+#define CIMGGIP_MAIN
 #include "CImgGIP05.h"
+#include "MyRectangle.h"
 
 MyRectangle::MyRectangle() : x1(0), x2(20), y1(0), y2(20) {}
 
@@ -16,4 +17,13 @@ void MyRectangle::set(int x1, int y1, int x2, int y2)
 	this->y1 = y1;
 	this->x2 = x2;
 	this->y2 = y2;
+}
+
+bool MyRectangle::does_not_collide_with(const MyRectangle& other)
+{
+	if (x2 < other.x1 || other.x2 < x1 ||
+		other.y1 > y2 || y1 > other.y2)
+		return true;
+
+	return false;
 }

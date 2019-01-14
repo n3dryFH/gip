@@ -1,13 +1,14 @@
 #pragma once
 
-class MyRectangle
+class MyRectangle 
 {
 public:
 	MyRectangle();
-	MyRectangle(int x1, int y1, int x2, int y2);
+	MyRectangle(int x1, int y1, int x2, int y2);	
 
-	void draw();
+	void draw();	
 	void set(int x1, int y1, int x2, int y2);
+	bool does_not_collide_with(const MyRectangle& other);
 
 	inline void setX1(int value) { x1 = value; }
 	inline void setX2(int value) { x2 = value; }
