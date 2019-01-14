@@ -181,23 +181,24 @@ void grid_init(bool grid[][grid_size])
 
 bool ShouldFieldBeAlive(unsigned int aX, unsigned int aY, bool aCurrentlyAlive, bool aGrid[][grid_size])
 {
-	unsigned int aliveCellsCounter = 0, endX = 0, endY = 0;
+	unsigned int aliveCellsCounter = 0;
+	unsigned int endX = 0, endY = 0;
 	unsigned int startX = aX > 0 ? aX - 1 : aX;
 	unsigned int startY = aY > 0 ? aY - 1 : aY;
 
 	if (aX == 0)
-		endX = startX + 1;
+		endX = 1;
 	else if (aX == grid_size - 1)
-		endX = startX;
+		endX = aX;
 	else
-		endX = startX + 2;
+		endX = aX + 1;
 
 	if (aY == 0)
-		endY = startY + 1;
+		endY = 1;
 	else if (aY == grid_size - 1)
-		endY = startY;
+		endY = aY;
 	else
-		endY = startY + 2;
+		endY = aY + 1;
 
 	for (unsigned int x = startX; x <= endX; ++x)
 		for (unsigned int y = startY; y <= endY; ++y)
