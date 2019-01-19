@@ -101,6 +101,9 @@ std::string MyString2::to_string() const
 
 MyString2& MyString2::operator=(const MyString2& my_str)
 {
+	if (anker)
+		delete_internal();
+
 	anker = my_str.deep_copy_internal();
 	return *this;
 }
