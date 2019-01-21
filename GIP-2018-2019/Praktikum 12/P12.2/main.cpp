@@ -37,5 +37,6 @@ int main(int argc, char* argv[])
 	std::cout << "Ergebnis: " << ergebnis.to_string() << std::endl;
 
 	system("PAUSE");
-	return 0;
+	return 0;
+
 }

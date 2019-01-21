@@ -1,13 +1,11 @@
 #include "CImgGIP05.h"
 #include "MyRectangle.h"
 
-MyRectangle::MyRectangle() : x1(0), x2(20), y1(0), y2(20) {}
+MyRectangle::MyRectangle() : x1(0), x2(20), y1(0), y2(20) { }
 
-MyRectangle::MyRectangle(int x1, int y1, int x2, int y2) : x1(x1), x2(x2), y1(y1), y2(y2) {}
+MyRectangle::MyRectangle(int x1, int y1, int x2, int y2) : x1(x1), x2(x2), y1(y1), y2(y2) { }
 
-MyRectangle::~MyRectangle()
-{
-}
+MyRectangle::~MyRectangle() { }
 
 void MyRectangle::draw() const
 {

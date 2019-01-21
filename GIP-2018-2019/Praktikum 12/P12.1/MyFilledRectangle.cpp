@@ -1,14 +1,9 @@
 #include "CImgGIP05.h"
 #include "MyFilledRectangle.h"
 
-MyFilledRectangle::MyFilledRectangle(int x1, int y1, int x2, int y2) : MyRectangle(x1, y1, x2, y2)
-{
-}
+MyFilledRectangle::MyFilledRectangle(int x1, int y1, int x2, int y2) : MyRectangle(x1, y1, x2, y2) { }
 
-
-MyFilledRectangle::~MyFilledRectangle()
-{
-}
+MyFilledRectangle::~MyFilledRectangle() { }
 
 void MyFilledRectangle::draw() const
 {

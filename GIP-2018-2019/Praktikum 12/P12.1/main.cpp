@@ -18,9 +18,15 @@ int main()
 		int y2_2 = gip_random(y1_2, gip_win_size_y - 1);
 		MyFilledRectangle r2(x1_2, y1_2, x2_2, y2_2);
 		// Alles neu zeichnen ...
+		gip_stop_updates();
 		gip_white_background();
 		r1.draw();
-		r2.draw();
+		r2.draw();		
+		if (r1.does_not_collide_with(r2))
+			gip_draw_text(10, 10, "Keine Kollision.");
+		else
+			gip_draw_text(10, 10, "Kollision!");
+		gip_start_updates();
 		// Pausieren ...
 		gip_sleep(4);
 	}

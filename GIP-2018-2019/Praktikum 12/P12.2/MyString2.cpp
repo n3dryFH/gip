@@ -70,21 +70,18 @@ unsigned int MyString2::length() const
 }
 
 char MyString2::at(const unsigned int pos) const
-{
-	char c = '\0';
+{	
 	unsigned int counter = 0;
 	CharListenKnoten* ptr = anker;
 	while (ptr)
 	{
-		if (pos == counter)
-		{
-			c = ptr->get_data();
-			break;
-		}
+		if (pos == counter)		
+			return ptr->get_data();			
+		
 		ptr = ptr->get_next();
 		++counter;
 	}
-	return c;
+	return '\0';
 }
 
 std::string MyString2::to_string() const
