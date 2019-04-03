@@ -13,11 +13,12 @@ $(MAIN_EXECUTABLE): $(OBJ)
 	
 clean:
 	del *.obj
-.PHONY: clean
 
 distclean: clean
 	del $(MAIN_EXECUTABLE)
 
-#$< = name of the first prerequisite, /c = compile with linking
+#$< = name of the first prerequisite, /c = compile without linking
 %.obj: %.cpp	
 	$(CXX) $(CXXFLAGS) /c $^	
+
+.Phony: clean distclean all

@@ -9,6 +9,6 @@ void MyFilledRectangle::draw() const
 {
 	MyRectangle::draw();
 	if ((x2 - x1) > 4 && (y2 - y1) > 4)	
-		for (unsigned int yPos = y1 + 2; yPos < y2 - 2; ++yPos)
+		for (unsigned int yPos = y1 + 2; yPos < y2 - 1; ++yPos)
 			gip_draw_line(x1 + 2, yPos, x2 - 2, yPos, red);	
 }
